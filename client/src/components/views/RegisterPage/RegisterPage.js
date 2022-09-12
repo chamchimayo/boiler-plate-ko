@@ -47,7 +47,7 @@ function RegisterPage(props) {
           if (response.payload.success) {
               navigate('/login')
           } else {
-              alert('Failed to sign up')
+              alert('Failed to sign upa')
           }
       })
 
