@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { loginUser } from '../../../_actions/user_action'
 // import { withRouter } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Auth from '../../../hoc/auth'
 
 function LoginPage(props) {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ function LoginPage(props) {
       >
         <label>Email</label>
         <input type="email" value={Email} onChange={onEmailHandler} />
-        
+
         <label>Password</label>
         <input type="password" value={Password} onChange={onPasswordHandler} />
         
@@ -65,4 +66,4 @@ function LoginPage(props) {
   )
 }
 
-export default LoginPage
+export default Auth(LoginPage, false);
